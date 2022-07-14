@@ -1,0 +1,46 @@
+@import "src/theme/styles/_var";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 50px;
+  background-color: black;
+  color: white;
+  vertical-align: center;
+  align-items: center;
+  font-weight: bold;
+  position: sticky;
+  top:0;
+  z-index: 2;
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  &__link {
+    transition: 0.2s ease all;
+  }
+
+  &__link:hover {
+    color: $secondaryColor;
+    cursor: pointer;
+  }
+
+  &__button {
+    padding: 10px;
+    border-radius: 10px;
+    //border: none;
+    border: 1px solid $secondaryColor;
+    background-color: inherit;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease all;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+    color: $secondaryColor;
+  }
+}

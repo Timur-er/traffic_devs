@@ -1,0 +1,48 @@
+@import "src/theme/styles/_var";
+
+.section {
+  margin-top: 100px;
+
+  &__title{
+    font-size: 64px;
+    margin: 0;
+  }
+
+  &__wrapper {
+   display: flex;
+  }
+
+  &__form_container {
+    width: 50%;
+    padding: 60px;
+  }
+
+
+  &__contacts_container {
+    width: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: $secondaryColor;
+    padding: 60px;
+    gap: 80px;
+  }
+
+  &__contacts_title {
+    font-size: $textFontSize;
+  }
+
+  &__contact_info {
+    width: 70%;
+  }
+
+  &__contact_row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__contact_cell {
+    width: 50%;
+  }
+}

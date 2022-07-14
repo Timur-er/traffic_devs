@@ -1,0 +1,40 @@
+@import 'src/theme/styles/_var';
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  vertical-align: center;
+  align-items: center;
+  align-content: center;
+  padding: 50px 0;
+
+  &__title {
+    font-size: $titleFontSize;
+  }
+
+  &__title_accent{
+    color:$secondaryColor;
+  }
+
+  &__offer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__button {
+    padding: 15px 20px;
+    font-weight: bold;
+    width: 25%;
+    text-align: center;
+    background-color:$secondaryColor;
+    border: 1.5px solid $secondaryColor;
+    border-radius: 10px;
+    transition: 0.3s ease all;
+  }
+
+  &__button:hover {
+    background-color: inherit;
+    cursor: pointer;
+  }
+}

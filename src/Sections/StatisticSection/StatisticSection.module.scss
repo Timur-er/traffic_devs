@@ -1,0 +1,35 @@
+@import '../../theme/styles/_var';
+
+.statistic {
+  &__title {
+    font-size:$subTitleFontSize;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top:$marginFromTitle;
+  }
+
+  &__stat {
+    width: 50%;
+    display: grid;
+    gap: 80px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    grid-auto-flow: column;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+  }
+  &__card_title {
+    font-size: $textFontSize;
+  }
+  &__card_data {
+    font-size: 48px;
+    color:$secondaryColor;
+  }
+}

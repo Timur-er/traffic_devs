@@ -1,0 +1,22 @@
+@import "src/theme/styles/_var";
+
+.about {
+  padding: 50px 150px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 330px;
+
+  &__title {
+    color:$secondaryColor;
+    font-size: $titleFontSize;
+    margin: 0;
+  }
+
+  &__description {
+    margin-top: $marginFromTitle;
+    display: block;
+    color: white;
+    font-size: $textFontSize;
+  }
+}

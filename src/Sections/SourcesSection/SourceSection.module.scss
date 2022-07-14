@@ -1,0 +1,20 @@
+@import "src/theme/styles/_var";
+
+.source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top:$marginFromTitle;
+
+  &__title {
+    text-align: center;
+    font-size:$subTitleFontSize;
+  }
+
+  &__image {
+    height: 50px;
+    flex: 1;
+    text-align: center;
+    min-width: 20%;
+  }
+}

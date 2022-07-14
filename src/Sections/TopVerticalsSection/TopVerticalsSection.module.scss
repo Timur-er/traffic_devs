@@ -1,0 +1,47 @@
+@import "src/theme/styles/_var";
+
+.vertical_section {
+  display: flex;
+  justify-content: space-between;
+  padding-top:$marginFromTitle;
+
+  &__title {
+    font-size:$subTitleFontSize;
+    margin: 0;
+  }
+
+  &__icons {
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 50px;
+    column-gap: 100px;
+  }
+}
+
+.card {
+  width: 200px;
+  &__iconContainer {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    align-items: center;
+  }
+
+  &__icon {
+    z-index: 1;
+  }
+  &__green_line {
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    background-color:$secondaryColor;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 10px;
+    font-size: 24px;
+  }
+}
+

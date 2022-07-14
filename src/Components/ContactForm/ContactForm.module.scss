@@ -1,0 +1,46 @@
+@import "src/theme/styles/_var";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  //width: 40%;
+  gap: 25px;
+  margin-top: 50px;
+  color: black;
+
+  &__wrapper {
+    width: 80%;
+    //background-color: black;
+    border-radius: 10px;
+    //padding: 20px 20px 40px 20px;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__label_text {
+    font-weight: bold;
+  }
+
+  &__input {
+    border: 1.5px solid black;
+    padding: 5px;
+    outline: none;
+    background-color: inherit;
+  }
+
+  &__submit_button {
+    border: 1.5px solid $secondaryColor;
+    background-color:$secondaryColor;
+    font-weight: bold;
+    font-size: $textFontSize;
+    transition: 0.3s ease all;
+  }
+
+  &__submit_button:hover{
+    background-color: inherit;
+  }
+}

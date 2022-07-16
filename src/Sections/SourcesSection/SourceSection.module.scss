@@ -4,11 +4,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding-top:$marginFromTitle;
+  padding-top: $marginFromTitle;
+
+  @media (min-width: $tabMin) and (max-width: $tabMax) {
+    padding-top: 20px;
+  }
+
+  &__background {
+    background-image: url("../../svg/backgrounds/about.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
 
   &__title {
     text-align: center;
-    font-size:$subTitleFontSize;
+    font-size: $subTitleFontSize;
+    margin: 0;
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size: $titleFontSizeTab;
+    }
   }
 
   &__image {
@@ -16,5 +31,7 @@
     flex: 1;
     text-align: center;
     min-width: 20%;
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+    }
   }
 }

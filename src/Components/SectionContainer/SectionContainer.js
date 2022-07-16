@@ -3,9 +3,9 @@ import styles from './SectionContainer.module.scss';
 
 const SectionContainer = ({children, id}) => {
     return (
-        <div id={id} className={styles.container}>
+        <section id={id} className={styles.container}>
             {children}
-        </div>
+        </section>
     );
 };
 

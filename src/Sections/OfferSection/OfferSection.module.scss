@@ -6,10 +6,39 @@
   vertical-align: center;
   align-items: center;
   align-content: center;
-  padding: 50px 0;
+
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+    justify-content: normal;
+  }
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    flex-direction: column;
+  }
+
+    &__background {
+    background-image:url("../../svg/backgrounds/mainWave.svg");
+     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    padding-bottom: 40px;
+  }
 
   &__title {
     font-size: $titleFontSize;
+    margin: 0;
+    @media (min-width: $deskXMin) and (max-width: $deskXMax) {
+      font-size:$titleFontSizeDesk;
+    }
+
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      font-size:$titleFontSizeDesk;
+    }
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      font-size: $titleFontSizeTab;
+
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      font-size:$titleFontSizeTab;
+    }
   }
 
   &__title_accent{
@@ -20,7 +49,15 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-  }
+    max-width: 50%;
+    margin: 0;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      max-width: 100%;
+      gap: 20px;
+      text-align: center;
+      align-items: center;
+    }
+    }
 
   &__button {
     padding: 15px 20px;
@@ -31,10 +68,41 @@
     border: 1.5px solid $secondaryColor;
     border-radius: 10px;
     transition: 0.3s ease all;
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      padding: 10px;
+      width: 30%;
+      font-size:$textFontSizeTab;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      padding: 10px;
+      width: 80%;
+      font-size:$textFontSizeMob;
+    }
   }
 
   &__button:hover {
     background-color: inherit;
     cursor: pointer;
+  }
+
+  &__svg_wrapper {
+    display: flex;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      margin-top: 20px;
+      justify-content: center;
+    }
+    }
+
+  &__svg {
+    height: min-content;
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      width: 120%;
+    }
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      width: 100%;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      width: 80%;
+    }
   }
 }

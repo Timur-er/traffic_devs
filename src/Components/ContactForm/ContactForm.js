@@ -29,7 +29,7 @@ const ContactForm = () => {
                 }}>
                 {(formik) => {
                     return (
-                        <div className={styles.form__wrapper}>
+                        // <div className={styles.form__wrapper}>
                             <Form className={styles.form}>
                                 <label className={styles.form__label}>
                                         <span className={styles.form__label_text}>
@@ -48,12 +48,13 @@ const ContactForm = () => {
                                             Message
                                         </span>
                                         <Field className={styles.form__input} name='message' placeholder='Message'/>
+                                    <ErrorMessage name={'message'} />
                                 </label>
                                 <button className={styles.form__submit_button}>
                                     Send
                                 </button>
                             </Form>
-                        </div>
+                        // </div>
                     )
                 }}
             </Formik>

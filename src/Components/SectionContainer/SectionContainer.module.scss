@@ -1,5 +1,20 @@
+@import 'src/theme/styles/_var';
+
 .container {
-  padding: 100px 150px 0 150px;
-  //height: 600px;
-  //border: 1px solid red;
+  padding: 50px 150px;
+  overflow: hidden;
+
+  @media (min-width: $deskXMin) and (max-width: $deskXMax) {
+    padding: 100px;
+  }
+
+  @media (min-width: $deskMin) and (max-width: $deskMax) {
+    padding: 50px;
+  }
+  @media (min-width: $tabMin) and (max-width: $tabMax) {
+    padding: 30px;
+  }
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    padding: 20px;
+  }
 }

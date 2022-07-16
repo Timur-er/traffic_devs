@@ -1,0 +1,95 @@
+@import "src/theme/styles/_var";
+
+.inventory {
+  margin-top:$marginFromTitle;
+
+  @media (min-width: $tabMin) and (max-width: $tabMax) {
+    margin-top: 20px;
+  }
+
+    &__background {
+    background-image: url("../../svg/backgrounds/about.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top, bottom;
+  }
+
+  &__title {
+    font-size:$subTitleFontSize;
+    margin: 0;
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size:$titleFontSizeTab;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      text-align: center;
+    }
+    }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      flex-direction: column;
+    }
+    }
+
+  &__content_section {
+    font-size: $textFontSize;
+    display: flex;
+    width: 40%;
+    vertical-align: center;
+    align-items: center;
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      font-size:$textFontSizeTab;
+      width: 50%;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      font-size:$textFontSizeMob;
+      width: 100%;
+      text-align: center;
+    }
+    }
+
+  &__content_section:nth-child(1) {
+    background-image: url("../../svg/backgrounds/blob2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  &__content_section:nth-child(2) {
+    background-image: url("../../svg/backgrounds/blob3.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__svg_wrapper {
+    width: 50%;
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      width: 100%;
+      justify-content: center;
+      order: 2;
+    }
+    }
+
+  &__svg_wrapper:nth-child(2) {
+    justify-content: end;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      justify-content: center;
+
+    }
+    }
+
+  &__svg {
+    height: min-content;
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      width: 80%;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      width: 60%;
+    }
+    }
+}

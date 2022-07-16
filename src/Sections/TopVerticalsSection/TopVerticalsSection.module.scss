@@ -1,27 +1,84 @@
 @import "src/theme/styles/_var";
 
-.vertical_section {
+.verticals {
   display: flex;
   justify-content: space-between;
   padding-top:$marginFromTitle;
 
+  @media (min-width: $mobMin) and (max-width: $tabMax) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__background {
+    background-image: url("../../svg/backgrounds/about.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top, bottom;
+    padding-bottom: 40px;
+  }
+
   &__title {
     font-size:$subTitleFontSize;
     margin: 0;
-  }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size:$titleFontSizeTab;
+      text-align: center;
+    }
+    }
 
   &__icons {
     display: flex;
     width: 50%;
     flex-wrap: wrap;
-    gap: 50px;
-    column-gap: 100px;
-  }
+    gap: 50px 100px;
+    @media (min-width: $deskXMin) and (max-width: $deskXMax) {
+      gap: 30px 80px;
+    }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      width: 100%;
+      justify-content: center;
+    }
+    }
+
+  &__svg_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    vertical-align: center;
+    align-items: center;
+    width: 50%;
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      height: min-content;
+    }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      margin-top: 20px;
+    }
+    }
+
+  &__svg{
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      width: 95%;
+    }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      height: min-content;
+    }
+    }
 }
 
 .card {
+  background-image: url("../../svg/backgrounds/blob1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 200px;
-  &__iconContainer {
+  @media (min-width: $deskMin) and (max-width: $deskMax) {
+    width: 150px;
+  }
+  @media (min-width: $mobMin) and (max-width: $tabMax) {
+    width: 100px;
+  }
+
+    &__iconContainer {
     display: flex;
     justify-content: center;
     vertical-align: center;
@@ -31,17 +88,18 @@
   &__icon {
     z-index: 1;
   }
-  &__green_line {
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    background-color:$secondaryColor;
-  }
 
   &__text {
     display: block;
     margin-top: 10px;
-    font-size: 24px;
-  }
+    text-align: center;
+    font-size: $textFontSize;
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      font-size: 18px;
+    }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size:$textFontSizeTab;
+    }
+    }
 }
 

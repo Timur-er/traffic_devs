@@ -5,6 +5,14 @@ import styles from './TopVerticalsSection.module.scss';
 import {ReactComponent as TopVerticalsSVG} from "../../svg/top_verticals.svg";
 
 const TopVerticalsSection = () => {
+    const width = window.innerWidth;
+    let iconWidth = '80px';
+    let iconHeight = '60px';
+
+    if (width < 823) {
+        iconWidth = '60px';
+        iconHeight = '50px'
+    }
 
     const topVerticals = [
         {
@@ -45,12 +53,11 @@ const TopVerticalsSection = () => {
     const renderCards = topVerticals.map(vertical => {
         const {name, icon} = vertical;
         return (
-            <div className={styles.card}>
+            <div key={name} className={styles.card}>
                 <div className={styles.card__iconContainer}>
                     <div className={styles.card__icon}>
-                        <Icons type={icon} width='80px' height='60px'/>
+                        <Icons type={icon} width={iconWidth} height={iconHeight}/>
                     </div>
-                        <div className={styles.card__green_line} />
                 </div>
                 <span className={styles.card__text}>
                     {name}
@@ -60,17 +67,19 @@ const TopVerticalsSection = () => {
     })
 
     return (
-        <SectionContainer id='topVerticals'>
-            <h2 className={styles.vertical_section__title}>Top Verticals</h2>
-            <div className={styles.vertical_section}>
-                <div className={styles.vertical_section__icons}>
-                    {renderCards}
+        <div className={styles.verticals__background}>
+            <SectionContainer id='topVerticals'>
+                    <h2 className={styles.verticals__title}>Top Verticals</h2>
+                <div className={styles.verticals}>
+                    <div className={styles.verticals__icons}>
+                        {renderCards}
+                    </div>
+                    <div className={styles.verticals__svg_wrapper}>
+                        <TopVerticalsSVG className={styles.verticals__svg}/>
+                    </div>
                 </div>
-                <div>
-                    <TopVerticalsSVG />
-                </div>
-            </div>
-        </SectionContainer>
+            </SectionContainer>
+        </div>
     );
 };
 

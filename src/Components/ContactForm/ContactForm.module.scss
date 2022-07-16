@@ -3,16 +3,12 @@
 .form {
   display: flex;
   flex-direction: column;
-  //width: 40%;
   gap: 25px;
   margin-top: 50px;
   color: black;
 
-  &__wrapper {
-    width: 80%;
-    //background-color: black;
-    border-radius: 10px;
-    //padding: 20px 20px 40px 20px;
+  @media (min-width: $tabMin) and (max-width: $tabMax) {
+    //margin: 0 auto;
   }
 
   &__label {
@@ -38,7 +34,10 @@
     font-weight: bold;
     font-size: $textFontSize;
     transition: 0.3s ease all;
-  }
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      //font-size:$titleFontSizeTab;
+    }
+    }
 
   &__submit_button:hover{
     background-color: inherit;

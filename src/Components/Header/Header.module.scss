@@ -12,11 +12,60 @@
   position: sticky;
   top:0;
   z-index: 2;
+  height: 75px;
+
+  @media (min-width: $tabMin) and (max-width: $tabMax) {
+    padding: 5px 40px 5px 0;
+  }
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    padding: 5px 40px 5px 0;
+  }
+
+    &__links_wrapper {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    width: 50%;
+    @media (min-width: $deskMin) and (max-width: $deskXMax) {
+      width: 65%;
+    }
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      width: 80%;
+    }
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      //width: 85%;
+    }
+  }
 
   &__links {
+    width: 100%;
     display: flex;
+    margin-left: 50px;
     justify-content: space-between;
-    width: 50%;
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 80px);
+      top: 85px;
+      left: -100%;
+      background-color: black;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 0;
+      padding: 40px;
+      transition: 0.3s ease all;
+    }
+    }
+
+  &__links_open {
+   left: 0;
+  }
+
+  &__link_wrapper {
+    text-decoration: none;
+    list-style: none;
   }
 
   &__link {
@@ -31,16 +80,62 @@
   &__button {
     padding: 10px;
     border-radius: 10px;
-    //border: none;
     border: 1px solid $secondaryColor;
     background-color: inherit;
     color: white;
     font-weight: bold;
     transition: 0.2s ease all;
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      display: none;
+    }
   }
 
   &__button:hover {
     cursor: pointer;
     color: $secondaryColor;
   }
+}
+
+.burger {
+  flex-direction: column;
+  width: 25px;
+  gap: 5px;
+  overflow: hidden;
+  display: none;
+
+  @media (min-width: $mobMin) and (max-width: $tabMax) {
+    display: flex;
+  }
+
+    &__top {
+    height: 3px;
+    background-color:$secondaryColor;
+    transition: 0.3s ease all;
+  }
+
+  &__middle {
+    height: 3px;
+    background-color:$secondaryColor;
+    transition: 0.3s ease all;
+
+  }
+
+  &__bottom {
+    height: 3px;
+    background-color:$secondaryColor;
+    transition: 0.3s ease all;
+  }
+
+  &__open_top {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &__open_middle {
+    margin-right: 30px;
+  }
+
+  &__open_bottom {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
 }

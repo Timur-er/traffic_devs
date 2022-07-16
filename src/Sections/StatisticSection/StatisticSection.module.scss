@@ -3,6 +3,21 @@
 .statistic {
   &__title {
     font-size:$subTitleFontSize;
+    margin: 0;
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size:$titleFontSizeTab;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      text-align: center;
+    }
+    }
+
+  &__background {
+    background-image: url("../../svg/backgrounds/about.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top, bottom;
+    padding-bottom: 40px;
   }
 
   &__wrapper {
@@ -10,7 +25,13 @@
     justify-content: space-between;
     align-items: flex-start;
     padding-top:$marginFromTitle;
-  }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      padding-top: 20px;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      flex-direction: column;
+    }
+    }
 
   &__stat {
     width: 50%;
@@ -19,17 +40,63 @@
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 50%);
     grid-auto-flow: column;
-  }
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      gap: 40px;
+    }
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      width: 50%;
+      gap: 20px;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      width: calc(100% - 20px);
+      gap: 20px;
+    }
+    }
 
   &__card {
     display: flex;
     flex-direction: column;
   }
+
+  &__to_right_mob {
+    text-align: right;
+  }
+
   &__card_title {
     font-size: $textFontSize;
-  }
+    @media (min-width: $deskMin) and (max-width: $deskMax) {
+      font-size: 20px;
+    }
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size:12px;
+    }
+    }
   &__card_data {
     font-size: 48px;
     color:$secondaryColor;
+    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      font-size:$titleFontSizeTab;
+    }
   }
+
+  &__svg_wrapper {
+    display: flex;
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      justify-content: end;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      justify-content: center;
+    }
+    }
+
+  &__svg {
+    height: min-content;
+    @media (min-width: $tabMin) and (max-width: $tabMax) {
+      width: 90%;
+    }
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      width: 80%;
+      margin-top: 20px;
+    }
+    }
 }

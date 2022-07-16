@@ -2,7 +2,7 @@ import React from "react";
 
 export const logo = (width, height, color = '#ffffff') => (
     <svg xmlns="http://www.w3.org/2000/svg" id="eXVTnwc6vQN1"
-     viewBox="0 0 375 374.999991" width={`${width}`} height={`${height}`} fill={`${color}`} shapeRendering="geometricPrecision" textRendering="geometricPrecision">
+     viewBox="0 0 375 375" width={`${width}`} height={`${height}`} fill={`${color}`} shapeRendering="geometricPrecision" textRendering="geometricPrecision">
         <defs>
             <linearGradient id="eXVTnwc6vQN6-fill" x1="108.782783" y1="237.789205" x2="285.551753" y2="61.020235"
                             spreadMethod="pad" gradientUnits="userSpaceOnUse" gradientTransform="translate(0 0)">

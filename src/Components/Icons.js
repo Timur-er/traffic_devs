@@ -8,9 +8,6 @@ const Icons = (props) => {
     const icon = icons[type];
     return (
         <span onClick={() => click()} style={{width: width, height: height}}>
-        {/*// <span>*/}
-            {/*{icon()}*/}
-            {console.log(icons)}
             {icon(width, height, color)}
         </span>
     );

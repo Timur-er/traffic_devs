@@ -1,11 +1,9 @@
 import React from 'react';
-import SectionContainer from "../../Components/SectionContainer/SectionContainer";
 import ContactForm from "../../Components/ContactForm/ContactForm";
 import styles from './ContactSection.module.scss';
 
 const ContactSection = () => {
     return (
-        <div className={styles.section}>
 
             <div className={styles.section__wrapper} id='contactUs'>
 
@@ -20,20 +18,20 @@ const ContactSection = () => {
                         </span>
 
                     <div className={styles.section__contact_info}>
-                        <div className={styles.section__contact_row}>
-                                <span>
-                                    telephone
-                                </span>
-                            <span className={styles.section__contact_cell}>
-                                    + 49 1234564444
-                                </span>
-                        </div>
+                        {/*<div className={styles.section__contact_row}>*/}
+                        {/*        <span>*/}
+                        {/*            telephone*/}
+                        {/*        </span>*/}
+                        {/*    <span className={styles.section__contact_cell}>*/}
+                        {/*            + 49 1234564444*/}
+                        {/*        </span>*/}
+                        {/*</div>*/}
                         <div className={styles.section__contact_row}>
                                 <span>
                                     email
                                 </span>
                             <span className={styles.section__contact_cell}>
-                                    contact@rtbsystem.com
+                                    trafficdevs@gmail.com
                                 </span>
                         </div>
                         <div className={styles.section__contact_row}>
@@ -41,9 +39,8 @@ const ContactSection = () => {
                                     place
                                 </span>
                             <span className={styles.section__contact_cell}>
-                                    Ideal Media US, Inc.
-                                    15720 Brixham Hill Avenue, Suite 300, Charlotte, North Carolina, 28277
-                                </span>
+                                  Digital Advertising Agency LLC, Georgia, Tbilisi, O. Khizanishvili str, N264, 0162
+                            </span>
                         </div>
                     </div>
 
@@ -51,7 +48,6 @@ const ContactSection = () => {
 
             </div>
 
-        </div>
     );
 };
 

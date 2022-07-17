@@ -50,19 +50,6 @@
     }
     }
 
-  &__content_section:nth-child(1) {
-    background-image: url("../../svg/backgrounds/blob2.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-  &__content_section:nth-child(2) {
-    background-image: url("../../svg/backgrounds/blob3.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-  }
-
   &__svg_wrapper {
     width: 50%;
     display: flex;
@@ -83,8 +70,28 @@
     }
     }
 
+  &__svg_wrapper:nth-child(1) {
+    background-image: url("../../svg/backgrounds/blob2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      background-position: center;
+    }
+    }
+  &__svg_wrapper:nth-child(2) {
+    background-image: url("../../svg/backgrounds/blob3.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      background-position: center;
+    }
+
+  }
+
   &__svg {
-    height: min-content;
+    height: initial;
     @media (min-width: $tabMin) and (max-width: $tabMax) {
       width: 80%;
     }

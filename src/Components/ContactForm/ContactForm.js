@@ -1,16 +1,22 @@
-import React from 'react';
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import React, {useRef} from 'react';
+import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as Yup from 'yup';
 import styles from './ContactForm.module.scss';
+import {NavLink} from "react-router-dom";
+import emailjs from 'emailjs-com';
+import {PRIVACY, TERMS} from "../../routes/const";
 
 
 const ContactForm = () => {
+    const form = useRef();
+
     const validationSchema = Yup.object({
         name: Yup.string()
-            .min(2, 'Минимальное количество символов 2')
+            .min(2, 'Minimum 2 symbols')
             .required('This is required field!'),
-        email: Yup.string().email('Не правильный email').required('Укажите email!'),
-        message: Yup.string().required('This is required field!')
+        email: Yup.string().email('Incorrect email').required('This is required field!'),
+        message: Yup.string().required('This is required field!'),
+        policy: Yup.bool().oneOf([true], 'Accept Terms & Conditions is required')
     });
 
     return (
@@ -21,40 +27,64 @@ const ContactForm = () => {
                     email: '',
                     message: '',
                     policy: true,
-                    subscription: true
                 }}
                 validationSchema={validationSchema}
-                onSubmit={async (values) => {
-                    console.log('submit');
+                onSubmit={async () => {
+                    emailjs.sendForm('gmail_serviceTRAFFICDEVS', 'template_dr7ydii', form.current, 'PIAvdRuSAqZ71T2Ox')
+                        .then((result) => {
+                            console.log(result.text);
+                        }, (error) => {
+                            console.log(error.text);
+                        });
                 }}>
                 {(formik) => {
                     return (
-                        // <div className={styles.form__wrapper}>
-                            <Form className={styles.form}>
-                                <label className={styles.form__label}>
-                                        <span className={styles.form__label_text}>
-                                            Name
-                                        </span>
-                                        <Field className={styles.form__input} name='name' placeholder='Full Name'/>
-                                </label>
-                                <label className={styles.form__label}>
-                                        <span className={styles.form__label_text}>
-                                            Email
-                                        </span>
-                                        <Field className={styles.form__input} name='email' type='email' placeholder='Email'/>
-                                </label>
-                                <label className={styles.form__label}>
-                                        <span className={styles.form__label_text}>
-                                            Message
-                                        </span>
-                                        <Field className={styles.form__input} name='message' placeholder='Message'/>
-                                    <ErrorMessage name={'message'} />
-                                </label>
-                                <button className={styles.form__submit_button}>
-                                    Send
-                                </button>
-                            </Form>
-                        // </div>
+                        <Form ref={form} className={styles.form}>
+                            <label className={styles.form__label}>
+                                <div className={styles.form__label_text}>
+                                    Name
+                                    <span className={styles.form__error}>
+                                            <ErrorMessage name={'name'}/>
+                                            </span>
+                                </div>
+                                <Field className={styles.form__input} name='name' placeholder='Full Name'/>
+                            </label>
+                            <label className={styles.form__label}>
+                                <div className={styles.form__label_text}>
+                                    Email
+                                    <span className={styles.form__error}>
+                                            <ErrorMessage name={'email'}/>
+                                            </span>
+                                </div>
+                                <Field className={styles.form__input} name='email' type='email' placeholder='Email'/>
+                            </label>
+                            <label className={styles.form__label}>
+                                <div className={styles.form__label_text}>
+                                    Message
+                                    <span className={styles.form__error}>
+                                            <ErrorMessage name={'message'}/>
+                                            </span>
+                                </div>
+                                <Field className={styles.form__input} name='message' placeholder='Message'/>
+                            </label>
+                            <label className={styles.form__checkbox_wrapper}>
+                                <Field name='policy' type='checkbox'/>
+                                <div className={styles.form__checkbox_text}>
+                                    <span>
+                                    I accept the <NavLink className={styles.form__link} to={TERMS}>Terms and
+                                    Conditions</NavLink> and <NavLink className={styles.form__link} to={PRIVACY}>Privacy
+                                    Policy</NavLink>.
+                                    </span>
+
+                                    <span className={styles.form__error}>
+                                    <ErrorMessage name='policy'/>
+                                    </span>
+                                </div>
+                            </label>
+                            <button type='submit' className={styles.form__submit_button}>
+                                Send
+                            </button>
+                        </Form>
                     )
                 }}
             </Formik>

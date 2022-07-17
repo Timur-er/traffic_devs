@@ -5,14 +5,14 @@
   overflow: hidden;
 
   @media (min-width: $deskXMin) and (max-width: $deskXMax) {
-    padding: 100px;
+    padding: 30px 100px 0px 100px;
   }
 
   @media (min-width: $deskMin) and (max-width: $deskMax) {
-    padding: 50px;
+    padding: 20px 50px 50px 50px;
   }
   @media (min-width: $tabMin) and (max-width: $tabMax) {
-    padding: 30px;
+    padding: 30px 30px 30px 30px;
   }
   @media (min-width: $mobMin) and (max-width: $mobMax) {
     padding: 6px 20px 20px 20px;

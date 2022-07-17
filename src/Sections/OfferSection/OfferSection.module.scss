@@ -22,7 +22,10 @@
     background-size: contain;
     background-position: bottom;
     padding-bottom: 40px;
-  }
+      @media (min-width: $mobMin) and (max-width: $mobMax) {
+        padding: 0;
+      }
+      }
 
   &__title {
     font-size: $titleFontSize;
@@ -71,6 +74,8 @@
     border: 1.5px solid $secondaryColor;
     border-radius: 10px;
     transition: 0.3s ease all;
+    font-family: 'Koulen', cursive;
+    font-size: 20px;
     @media (min-width: $tabMin) and (max-width: $tabMax) {
       padding: 10px;
       width: 30%;

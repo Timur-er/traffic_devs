@@ -25,10 +25,13 @@
     justify-content: space-between;
     align-items: flex-start;
     padding-top:$marginFromTitle;
-    @media (min-width: $mobMin) and (max-width: $tabMax) {
+      @media (min-width: $tabMin) and (max-width: $tabMax) {
       padding-top: 20px;
-    }
+      vertical-align: center;
+        align-items: center;
+      }
     @media (min-width: $mobMin) and (max-width: $mobMax) {
+      padding-top: 20px;
       flex-direction: column;
     }
     }
@@ -77,6 +80,9 @@
     font-family: 'Koulen', cursive;
     font-size: 48px;
     color:$secondaryColor;
+    margin: 0;
+    letter-spacing: 4px;
+    line-height: 1.2;
     @media (min-width: $mobMin) and (max-width: $tabMax) {
       font-size:$titleFontSizeTab;
     }
@@ -93,7 +99,7 @@
     }
 
   &__svg {
-    height: min-content;
+    height: initial;
     @media (min-width: $tabMin) and (max-width: $tabMax) {
       width: 90%;
     }

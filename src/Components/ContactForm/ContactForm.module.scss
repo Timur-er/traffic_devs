@@ -21,6 +21,8 @@
 
   &__label_text {
     font-weight: bold;
+    display: flex;
+    gap: 10px;
   }
 
   &__input {
@@ -35,15 +37,36 @@
     background-color:$secondaryColor;
     color: black;
     font-weight: bold;
-    font-size: $textFontSize;
+    font-size: 20px;
     transition: 0.3s ease all;
+    font-family: 'Koulen', cursive;
     padding: 10px;
     @media (min-width: $tabMin) and (max-width: $tabMax) {
-      //font-size:$titleFontSizeTab;
     }
     }
 
   &__submit_button:hover{
     background-color: inherit;
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__checkbox_wrapper {
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__checkbox_text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: dodgerblue;
   }
 }

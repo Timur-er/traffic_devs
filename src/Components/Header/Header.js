@@ -2,9 +2,12 @@ import React, {useState} from 'react';
 import {Link} from 'react-scroll'
 import styles from './Header.module.scss';
 import Icons from "../Icons";
+import {useNavigate} from "react-router-dom";
+import {MAIN} from "../../routes/const";
 
 
 const Header = () => {
+    const nav = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const topClassName = isMenuOpen ? `${styles.burger__top} ${styles.burger__open_top}` : `${styles.burger__top}`;
     const middleClassName = isMenuOpen ? `${styles.burger__middle} ${styles.burger__open_middle}` : `${styles.burger__middle}`;
@@ -14,6 +17,7 @@ const Header = () => {
 
     const toggleBtn = () => {
         setIsMenuOpen(!isMenuOpen)
+        nav(MAIN);
     }
 
     return (
@@ -24,20 +28,25 @@ const Header = () => {
             </span>
                 <ul className={linksListClassName}>
                     <li className={styles.header__link_wrapper}>
-                        <Link onClick={toggleBtn} className={styles.header__link} to="about" spy={true} smooth={true} offset={-90}
+                        <Link onClick={toggleBtn} className={styles.header__link} to="about" spy={true} smooth={true}
+                              offset={-90}
                               duration={500}>Who we are</Link>
                     </li>
                     <li className={styles.header__link_wrapper}>
-                        <Link onClick={toggleBtn} className={styles.header__link} to="topVerticals" spy={true} smooth={true} duration={500}>Top
+                        <Link onClick={toggleBtn} className={styles.header__link} to="topVerticals" spy={true}
+                              offset={-90}
+                              smooth={true} duration={500}>Top
                             Verticals</Link>
                     </li>
                     <li className={styles.header__link_wrapper}>
                         <Link onClick={toggleBtn} className={styles.header__link} to="features" spy={true} smooth={true}
-                              duration={500}>Features</Link>
+                              offset={-90}
+                              duration={500}>Why us?</Link>
                     </li>
                     <li className={styles.header__link_wrapper}>
                         <Link onClick={toggleBtn} className={styles.header__link} to="sources" spy={true} smooth={true}
-                              duration={500}>Audience</Link>
+                              offset={-90}
+                              duration={500}>Sources</Link>
                     </li>
                 </ul>
             </div>

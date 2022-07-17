@@ -64,7 +64,7 @@
     }
 
   &__svg{
-    height: min-content;
+    height: initial;
     @media (min-width: $deskMin) and (max-width: $deskMax) {
       width: 95%;
     }

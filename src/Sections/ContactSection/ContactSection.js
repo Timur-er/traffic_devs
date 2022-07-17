@@ -13,9 +13,9 @@ const ContactSection = () => {
                 </div>
 
                 <div className={styles.section__contacts_container}>
-                        <span className={styles.section__contacts_title}>
+                        <h2 className={styles.section__contacts_title}>
                             We'd love to talk to discuss new business opportunities.
-                        </span>
+                        </h2>
 
                     <div className={styles.section__contact_info}>
                         {/*<div className={styles.section__contact_row}>*/}
@@ -28,7 +28,7 @@ const ContactSection = () => {
                         {/*</div>*/}
                         <div className={styles.section__contact_row}>
                                 <span>
-                                    email
+                                    Email:
                                 </span>
                             <span className={styles.section__contact_cell}>
                                     trafficdevs@gmail.com
@@ -36,7 +36,7 @@ const ContactSection = () => {
                         </div>
                         <div className={styles.section__contact_row}>
                                 <span>
-                                    place
+                                    Place:
                                 </span>
                             <span className={styles.section__contact_cell}>
                                   Digital Advertising Agency LLC, Georgia, Tbilisi, O. Khizanishvili str, N264, 0162

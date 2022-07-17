@@ -6,12 +6,14 @@
   vertical-align: center;
   align-items: center;
   align-content: center;
+  padding: 60px 0;
 
     @media (min-width: $deskMin) and (max-width: $deskMax) {
     justify-content: normal;
   }
   @media (min-width: $mobMin) and (max-width: $mobMax) {
     flex-direction: column;
+    padding: 60px 0 0 0;
   }
 
     &__background {
@@ -38,6 +40,7 @@
     }
     @media (min-width: $mobMin) and (max-width: $mobMax) {
       font-size:$titleFontSizeTab;
+      width: 80%;
     }
   }
 
@@ -53,7 +56,7 @@
     margin: 0;
     @media (min-width: $mobMin) and (max-width: $mobMax) {
       max-width: 100%;
-      gap: 20px;
+      gap: 40px;
       text-align: center;
       align-items: center;
     }
@@ -75,8 +78,9 @@
     }
     @media (min-width: $mobMin) and (max-width: $mobMax) {
       padding: 10px;
-      width: 80%;
+      width: 50%;
       font-size:$textFontSizeMob;
+      //margin-top: 60px;
     }
   }
 
@@ -88,7 +92,7 @@
   &__svg_wrapper {
     display: flex;
     @media (min-width: $mobMin) and (max-width: $mobMax) {
-      margin-top: 20px;
+      margin-top: 60px;
       justify-content: center;
     }
     }

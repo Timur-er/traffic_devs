@@ -8,7 +8,9 @@
   color: black;
 
   @media (min-width: $tabMin) and (max-width: $tabMax) {
-    //margin: 0 auto;
+    margin: 0 auto;
+    justify-content: center;
+    width: 50%;
   }
 
   &__label {
@@ -31,9 +33,11 @@
   &__submit_button {
     border: 1.5px solid $secondaryColor;
     background-color:$secondaryColor;
+    color: black;
     font-weight: bold;
     font-size: $textFontSize;
     transition: 0.3s ease all;
+    padding: 10px;
     @media (min-width: $tabMin) and (max-width: $tabMax) {
       //font-size:$titleFontSizeTab;
     }

@@ -24,19 +24,19 @@ const Header = () => {
             </span>
                 <ul className={linksListClassName}>
                     <li className={styles.header__link_wrapper}>
-                        <Link className={styles.header__link} to="about" spy={true} smooth={true} offset={-90}
+                        <Link onClick={toggleBtn} className={styles.header__link} to="about" spy={true} smooth={true} offset={-90}
                               duration={500}>Who we are</Link>
                     </li>
                     <li className={styles.header__link_wrapper}>
-                        <Link className={styles.header__link} to="topVerticals" spy={true} smooth={true} duration={500}>Top
+                        <Link onClick={toggleBtn} className={styles.header__link} to="topVerticals" spy={true} smooth={true} duration={500}>Top
                             Verticals</Link>
                     </li>
                     <li className={styles.header__link_wrapper}>
-                        <Link className={styles.header__link} to="features" spy={true} smooth={true}
+                        <Link onClick={toggleBtn} className={styles.header__link} to="features" spy={true} smooth={true}
                               duration={500}>Features</Link>
                     </li>
                     <li className={styles.header__link_wrapper}>
-                        <Link className={styles.header__link} to="sources" spy={true} smooth={true}
+                        <Link onClick={toggleBtn} className={styles.header__link} to="sources" spy={true} smooth={true}
                               duration={500}>Audience</Link>
                     </li>
                 </ul>

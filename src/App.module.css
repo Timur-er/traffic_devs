@@ -1,4 +1,8 @@
 .body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2, h1 {
   font-family: 'Koulen', cursive;
   letter-spacing: 4px;
   line-height: 1.2;

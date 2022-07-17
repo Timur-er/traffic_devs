@@ -36,7 +36,7 @@
   &__stat {
     width: 50%;
     display: grid;
-    gap: 80px;
+    gap: 40px 80px ;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(2, 50%);
     grid-auto-flow: column;
@@ -59,7 +59,9 @@
   }
 
   &__to_right_mob {
-    text-align: right;
+    @media (min-width: $mobMin) and (max-width: $mobMax) {
+      text-align: right;
+    }
   }
 
   &__card_title {
@@ -72,6 +74,7 @@
     }
     }
   &__card_data {
+    font-family: 'Koulen', cursive;
     font-size: 48px;
     color:$secondaryColor;
     @media (min-width: $mobMin) and (max-width: $tabMax) {

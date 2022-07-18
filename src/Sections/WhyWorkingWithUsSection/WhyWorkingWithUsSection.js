@@ -13,7 +13,7 @@ const WhyWorkingWithUsSection = () => {
                     <div className={styles.inventory__content}>
                         <div className={styles.inventory__content_section}>
                             <p>
-                                Traffic devS is DSP built to deliver results. Powered by a unique AI algorithm, RTBsystem predicts, in real time, all possible outcomes from every single user available within the programmatic ecosystem, so the results are almost guaranteed.
+                                Traffic DevS is DSP built to deliver results. Powered by a unique AI algorithm, RTBsystem predicts, in real time, all possible outcomes from every single user available within the programmatic ecosystem, so the results are almost guaranteed.
                             </p>
                         </div>
                         <div className={styles.inventory__svg_wrapper}>

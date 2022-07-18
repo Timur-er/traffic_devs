@@ -10,7 +10,12 @@
     padding-top: 20px;
   }
 
-  &__background {
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    padding-top: 20px;
+  }
+
+
+    &__background {
     background-image: url("../../svg/backgrounds/about.svg");
     background-repeat: no-repeat;
     background-size: contain;

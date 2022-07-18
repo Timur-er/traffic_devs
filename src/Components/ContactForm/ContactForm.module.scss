@@ -8,12 +8,16 @@
   color: black;
 
   @media (min-width: $tabMin) and (max-width: $tabMax) {
-    margin: 0 auto;
+    margin: 20px auto;
     justify-content: center;
     width: 50%;
   }
 
-  &__label {
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    margin-top: 20px;
+  }
+
+    &__label {
     display: flex;
     flex-direction: column;
     gap: 10px;

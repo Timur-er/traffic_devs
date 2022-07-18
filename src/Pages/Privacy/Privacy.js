@@ -1,7 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Privacy.module.scss';
 
 const Privacy = () => {
+
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [])
+
     return (
         <div className={styles.privacy}>
                 <h1>Privacy Policy</h1>

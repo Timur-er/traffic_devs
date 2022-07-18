@@ -1,7 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './Terms.module.scss';
 
 const Terms = () => {
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [])
     return (
         <div className={styles.terms}>
                 <h1>Terms of Service</h1>

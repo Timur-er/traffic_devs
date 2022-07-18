@@ -6,6 +6,9 @@
   @media (min-width: $tabMin) and (max-width: $tabMax) {
     margin-top: 20px;
   }
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    margin-top: 0;
+  }
 
     &__background {
     background-image: url("../../svg/backgrounds/about.svg");

@@ -53,7 +53,7 @@ const Header = () => {
             <Link to="contactUs" spy={true} smooth={true} duration={500} className={styles.header__button}>Contact
                 Us</Link>
 
-            <div className={styles.burger} onClick={toggleBtn}>
+            <div className={styles.burger} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <div className={topClassName}/>
                 <div className={middleClassName}/>
                 <div className={bottomClassName}/>

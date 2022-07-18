@@ -10,7 +10,7 @@ import ContactSection from "../../Sections/ContactSection/ContactSection";
 
 const MainPage = () => {
     return (
-        <body className={styles.body}>
+        <div className={styles.body}>
         <OfferSection />
         <AboutSection />
         <TopVerticalsSection />
@@ -18,7 +18,7 @@ const MainPage = () => {
         <WhyWorkingWithUsSection />
         <SourcesSection />
         <ContactSection />
-        </body>
+        </div>
     );
 };
 

@@ -1,7 +1,18 @@
+@import "src/theme/styles/_var";
+
 .terms {
   padding: 5% 20%;
   font-size: 24px;
   line-height: 45px;
+
+  @media (min-width: $tabMin) and (max-width: $tabMax) {
+    padding: 5%;
+  }
+  @media (min-width: $mobMin) and (max-width: $mobMax) {
+    padding: 5%;
+    line-height: 30px;
+    font-size: 16px;
+  }
 
   &__bolder {
     font-weight: bold;

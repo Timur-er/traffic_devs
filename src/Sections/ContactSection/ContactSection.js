@@ -5,47 +5,48 @@ import styles from './ContactSection.module.scss';
 const ContactSection = () => {
     return (
 
-        <div className={styles.section__wrapper} id='contactUs'>
+            <div className={styles.section__wrapper} id='contactUs'>
 
-            <div className={styles.section__form_container}>
-                <h1 className={styles.section__title}>Contact us</h1>
-                <ContactForm/>
-            </div>
+                <div className={styles.section__form_container}>
+                    <h1 className={styles.section__title}>Contact us</h1>
+                    <ContactForm/>
+                </div>
 
-            <div className={styles.section__contacts_container}>
-                <h2 className={styles.section__contacts_title}>
-                    We'd love to talk to discuss new business opportunities.
-                </h2>
+                <div className={styles.section__contacts_container}>
+                        <h2 className={styles.section__contacts_title}>
+                            We'd love to talk to discuss new business opportunities.
+                        </h2>
 
-                <div className={styles.section__contact_info}>
-                    {/*<div className={styles.section__contact_row}>*/}
-                    {/*        <span>*/}
-                    {/*            telephone*/}
-                    {/*        </span>*/}
-                    {/*    <span className={styles.section__contact_cell}>*/}
-                    {/*            + 49 1234564444*/}
-                    {/*        </span>*/}
-                    {/*</div>*/}
-                    <div className={styles.section__contact_row}>
+                    <div className={styles.section__contact_info}>
+                        {/*<div className={styles.section__contact_row}>*/}
+                        {/*        <span>*/}
+                        {/*            telephone*/}
+                        {/*        </span>*/}
+                        {/*    <span className={styles.section__contact_cell}>*/}
+                        {/*            + 49 1234564444*/}
+                        {/*        </span>*/}
+                        {/*</div>*/}
+                        <div className={styles.section__contact_row}>
                                 <span>
                                     Email:
                                 </span>
-                        <span className={styles.section__contact_cell}>
+                            <span className={styles.section__contact_cell}>
                                     trafficdevs@gmail.com
                                 </span>
-                    </div>
-                    <div className={styles.section__contact_row}>
+                        </div>
+                        <div className={styles.section__contact_row}>
                                 <span>
                                     Place:
                                 </span>
-                        <span className={styles.section__contact_cell}>
-Marketing Intelligence Research Solutions LTD, McNamara Chambers, 2nd Floor, 116 Main Street, P.O. Box 3342, Road Town, Tortola British Virgin Islands                            </span>
+                            <span className={styles.section__contact_cell}>
+                                  Digital Advertising Agency LLC, Georgia, Tbilisi, O. Khizanishvili str, N264, 0162
+                            </span>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
-
-        </div>
 
     );
 };

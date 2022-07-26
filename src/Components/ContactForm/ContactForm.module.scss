@@ -49,6 +49,11 @@
     }
     }
 
+  &__disable_submit {
+    background-color: inherit;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+
   &__submit_button:hover{
     background-color: inherit;
   }

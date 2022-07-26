@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as Yup from 'yup';
 import styles from './ContactForm.module.scss';
@@ -9,6 +9,7 @@ import {PRIVACY, TERMS} from "../../routes/const";
 
 const ContactForm = () => {
     const form = useRef();
+    const [isMessageSend, setIsMessageSend] = useState(false);
 
     const validationSchema = Yup.object({
         name: Yup.string()
@@ -29,13 +30,15 @@ const ContactForm = () => {
                     policy: true,
                 }}
                 validationSchema={validationSchema}
-                onSubmit={async () => {
-                    emailjs.sendForm('gmail_serviceTRAFFICDEVS', 'template_dr7ydii', form.current, 'PIAvdRuSAqZ71T2Ox')
+                onSubmit={async (values, {resetForm, setSubmitting}) => {
+                    emailjs.sendForm('gmail_serviceTRAFFICDEVS', 'template_a5zevvf', form.current, 'PIAvdRuSAqZ71T2Ox')
                         .then((result) => {
                             console.log(result.text);
                         }, (error) => {
                             console.log(error.text);
                         });
+                    setIsMessageSend(true)
+                    resetForm()
                 }}>
                 {(formik) => {
                     return (
@@ -81,8 +84,9 @@ const ContactForm = () => {
                                     </span>
                                 </div>
                             </label>
-                            <button type='submit' className={styles.form__submit_button}>
-                                Send
+                            <button disabled={isMessageSend} type='submit'
+                                    className={isMessageSend ? `${styles.form__submit_button} ${styles.form__disable_submit}` : `${styles.form__submit_button}`}>
+                                {isMessageSend ? ('Message successfully delivered!') : ('Send')}
                             </button>
                         </Form>
                     )

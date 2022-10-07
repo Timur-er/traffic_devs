@@ -44,7 +44,7 @@ const WhyWorkingWithUsSection = () => {
                     <div className={styles.inventory__content}>
                         <animated.div style={fromLeftTextAnim} ref={leftTextRef} className={styles.inventory__content_section}>
                             <p>
-                                Traffic devS is DSP built to deliver results. Powered by a unique AI algorithm, RTBsystem predicts, in real time, all possible outcomes from every single user available within the programmatic ecosystem, so the results are almost guaranteed.
+                                Traffic devS is DSP built to deliver results. Powered by a unique AI algorithm, the system predicts, in real time, all possible outcomes from every single user available within the programmatic ecosystem, so the results are almost guaranteed.
                             </p>
                         </animated.div>
                         <animated.div ref={rightImageRef} style={fromRightImageAnim} className={styles.inventory__svg_wrapper}>

@@ -18,14 +18,6 @@ const ContactSection = () => {
                         </h2>
 
                     <div className={styles.section__contact_info}>
-                        {/*<div className={styles.section__contact_row}>*/}
-                        {/*        <span>*/}
-                        {/*            telephone*/}
-                        {/*        </span>*/}
-                        {/*    <span className={styles.section__contact_cell}>*/}
-                        {/*            + 49 1234564444*/}
-                        {/*        </span>*/}
-                        {/*</div>*/}
                         <div className={styles.section__contact_row}>
                                 <span>
                                     Email:
@@ -39,7 +31,7 @@ const ContactSection = () => {
                                     Place:
                                 </span>
                             <span className={styles.section__contact_cell}>
-                                  Digital Advertising Agency LLC, Georgia, Tbilisi, O. Khizanishvili str, N264, 0162
+                                Boumpoulinas, 1-3, BOUBOULINA BULIDING, Flat/Office 42, 1060, Nicosia, Cyprus
                             </span>
                         </div>
                     </div>

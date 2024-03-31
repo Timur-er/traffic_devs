@@ -31,7 +31,7 @@ const ContactSection = () => {
                                     Place:
                                 </span>
                             <span className={styles.section__contact_cell}>
-                                Boumpoulinas, 1-3, BOUBOULINA BULIDING, Flat/Office 42, 1060, Nicosia, Cyprus
+                               Traffic Devs S.R.L. Buzesti Nr. 75-77 Et. 9 Sect. 1 Cam.2 Si 3 Bucuresti Sectorul 1, 011013, Bucharest, Romania
                             </span>
                         </div>
                     </div>

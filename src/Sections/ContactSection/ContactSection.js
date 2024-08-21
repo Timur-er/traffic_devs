@@ -31,7 +31,9 @@ const ContactSection = () => {
                                     Place:
                                 </span>
                             <span className={styles.section__contact_cell}>
-                               Traffic Devs S.R.L. Buzesti Nr. 75-77 Et. 9 Sect. 1 Cam.2 Si 3 Bucuresti Sectorul 1, 011013, Bucharest, Romania
+                                TRAFFIC DEVS S.R.L.
+Burnitei street, 24, 1st floor, off. B111
+Sector 3, Bucharest, 32342 Romania
                             </span>
                         </div>
                     </div>
